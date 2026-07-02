@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  --color-bushido-black: #000000;
+  --color-bushido-white: #ffffff;
+  --color-bushido-red: #cd0e22;
+  --color-bushido-red-dark: #8a0a17;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bushido-white);
+  color: var(--color-bushido-black);
+}
