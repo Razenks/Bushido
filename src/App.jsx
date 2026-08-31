@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import Gallery from './components/Gallery'
+import Videos from './components/Videos'
 import Pilates from './components/Pilates'
 import SocialProof from './components/SocialProof'
 import Contact from './components/Contact'
@@ -17,6 +18,7 @@ function App() {
         <Hero />
         <Services />
         <Gallery />
+        <Videos />
         <Pilates />
         <SocialProof />
         <Contact />
