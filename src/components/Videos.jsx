@@ -1,6 +1,6 @@
 import karate from '../assets/karate.webp'
 import tatame from '../assets/tatame.jpg'
-import muayThai from '../assets/muay-thai.webp'
+import senseiIltonPoster from '../assets/sensei-ilton-poster.jpg'
 
 // Videos live in /public/videos and are served as static files (see README / deploy notes).
 const VIDEOS = [
@@ -20,7 +20,7 @@ const VIDEOS = [
   },
   {
     src: '/videos/sensei-ilton-aulas-de-personal.mp4',
-    poster: muayThai,
+    poster: senseiIltonPoster,
     title: 'Aulas de Personal com o Sensei Ilton',
     description:
       'Sensei Ilton apresenta as aulas particulares (personal) de lutas, abertas para todos os públicos.',
