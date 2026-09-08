@@ -1,5 +1,6 @@
 import karate from '../assets/karate.webp'
 import tatame from '../assets/tatame.jpg'
+import muayThai from '../assets/muay-thai.webp'
 
 // Videos live in /public/videos and are served as static files (see README / deploy notes).
 const VIDEOS = [
@@ -16,6 +17,13 @@ const VIDEOS = [
     title: 'Falando sobre o Karatê',
     description:
       'Um panorama do Karatê na Academia Bushido: tradição, disciplina e evolução técnica.',
+  },
+  {
+    src: '/videos/sensei-ilton-aulas-de-personal.mp4',
+    poster: muayThai,
+    title: 'Aulas de Personal com o Sensei Ilton',
+    description:
+      'Sensei Ilton apresenta as aulas particulares (personal) de lutas, abertas para todos os públicos.',
   },
 ]
 
