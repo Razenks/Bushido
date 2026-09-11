@@ -3,44 +3,8 @@ import tatame from '../assets/tatame.jpg'
 import senseiIltonPoster from '../assets/sensei-ilton-poster.jpg'
 import muayThaiSparring from '../assets/muay-thai-sparring.jpg'
 
-// Vídeo longo (6 min), comprimido de 125 MB para ~23 MB (720x720, CRF 27) e hospedado
-// no próprio site em /public/videos — evita a interface e a recompressão do Instagram.
-// Com preload="metadata" só baixa de fato quando a pessoa dá play.
-const FEATURED_VIDEO = {
-  src: '/videos/treino-de-muay-thai.mp4',
-  poster: muayThaiSparring,
-  title: 'Treino de Muay Thai na Academia Bushido',
-  description:
-    'Sparring de Muay Thai no tatame da Bushido: técnica, ritmo e controle sob orientação do professor.',
-}
-
-function FeaturedVideo() {
-  return (
-    <figure className="mx-auto mt-16 max-w-[420px] overflow-hidden rounded-2xl border border-white/10 bg-white/5">
-      <video
-        className="aspect-square w-full bg-black"
-        src={FEATURED_VIDEO.src}
-        poster={FEATURED_VIDEO.poster}
-        controls
-        preload="metadata"
-        playsInline
-      >
-        Seu navegador não suporta a reprodução de vídeo.
-      </video>
-      <figcaption className="p-5">
-        <p className="text-xs font-semibold tracking-[0.2em] text-[#CD0E22] uppercase">
-          Vídeo em destaque
-        </p>
-        <h3 className="mt-2 text-lg font-bold text-white">
-          {FEATURED_VIDEO.title}
-        </h3>
-        <p className="mt-1 text-sm text-white/60">{FEATURED_VIDEO.description}</p>
-      </figcaption>
-    </figure>
-  )
-}
-
 // Videos live in /public/videos and are served as static files (see README / deploy notes).
+// O de Muay Thai foi comprimido de 125 MB para ~23 MB (720x720, CRF 27) antes de subir aqui.
 const VIDEOS = [
   {
     src: '/videos/falando-sobre-o-judo.mp4',
@@ -62,6 +26,13 @@ const VIDEOS = [
     title: 'Aulas de Personal com o Sensei Ilton',
     description:
       'Sensei Ilton apresenta as aulas particulares (personal) de lutas, abertas para todos os públicos.',
+  },
+  {
+    src: '/videos/treino-de-muay-thai.mp4',
+    poster: muayThaiSparring,
+    title: 'Treino de Muay Thai na Academia Bushido',
+    description:
+      'Sparring de Muay Thai no tatame da Bushido: técnica, ritmo e controle sob orientação do professor.',
   },
 ]
 
@@ -89,9 +60,7 @@ export default function Videos() {
           </p>
         </div>
 
-        <FeaturedVideo />
-
-        <div className="mx-auto mt-8 grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2">
+        <div className="mx-auto mt-16 grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2">
           {VIDEOS.map(({ src, poster, title, description }) => (
             <figure
               key={src}
